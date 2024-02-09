@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6336b8-8e8e-4894-ba81-23f70bd94f7d" name="Changes" comment="added application module">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/CatalogConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/RepositoryFactoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/services/LibraryItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/resources/db/migration/V1__Create_Magazine_Table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/CatalogTestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/details/items/MagazineRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/details/services/LibraryItemServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="dc6336b8-8e8e-4894-ba81-23f70bd94f7d" name="Changes" comment="idea directory">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/CatalogConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/CatalogConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/CatalogTestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/CatalogTestConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +325,71 @@
       <option name="project" value="LOCAL" />
       <updated>1707489904650</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added catalog module">
+      <option name="closed" value="true" />
+      <created>1707489965931</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707489965931</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added tests for MagazineRepository">
+      <option name="closed" value="true" />
+      <created>1707490014040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490014040</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added LibraryItemService">
+      <option name="closed" value="true" />
+      <created>1707490106916</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490106916</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added RepositoryFactory Implementation">
+      <option name="closed" value="true" />
+      <created>1707490141701</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490141701</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added">
+      <option name="closed" value="true" />
+      <created>1707490167132</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490167132</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added">
+      <option name="closed" value="true" />
+      <created>1707490189193</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490189193</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added parent module">
+      <option name="closed" value="true" />
+      <created>1707490211244</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490211244</updated>
+    </task>
+    <task id="LOCAL-00012" summary="idea directory">
+      <option name="closed" value="true" />
+      <created>1707490231283</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490231283</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -347,6 +397,14 @@
     <MESSAGE value="added ManageLibraryUseCase to be used by the LibraryItemService" />
     <MESSAGE value="Added Entities for Magazine; Added Jpa repository for Magazine;" />
     <MESSAGE value="added application module" />
-    <option name="LAST_COMMIT_MESSAGE" value="added application module" />
+    <MESSAGE value="added catalog module" />
+    <MESSAGE value="added tests for MagazineRepository" />
+    <MESSAGE value="added LibraryItemService" />
+    <MESSAGE value="added RepositoryFactory Implementation" />
+    <MESSAGE value="added application properties" />
+    <MESSAGE value="added Magazine Table migration" />
+    <MESSAGE value="added parent module" />
+    <MESSAGE value="idea directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea directory" />
   </component>
 </project>

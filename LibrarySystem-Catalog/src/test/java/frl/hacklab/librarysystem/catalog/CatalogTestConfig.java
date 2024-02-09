@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootConfiguration
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"frl.hacklab.librarysystem.catalog"})
+@ComponentScan
 public class CatalogTestConfig {
 
 }
