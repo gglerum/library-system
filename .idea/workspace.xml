@@ -4,10 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6336b8-8e8e-4894-ba81-23f70bd94f7d" name="Changes" comment="idea directory">
+    <list default="true" id="dc6336b8-8e8e-4894-ba81-23f70bd94f7d" name="Changes" comment="fixed annotations to work with new location of config files">
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/dto/LibraryItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/dto/MagazineDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/usecases/AddLibraryItemUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/usecases/GetLibraryItemUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/usecases/RemoveLibraryItemUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/usecases/UpdateLibraryItemUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/services/BackendService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/services/FrontendService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/mappers/MagazineMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineBackendService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineFrontendService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineBackendServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineFrontendServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/resources/logback-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/CatalogConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/CatalogConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/BorrowingStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/BorrowingStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/DailyMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/DailyMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/repository/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/LibraryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/LibraryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/LibraryItemImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/LibraryItemImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/Literature.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/Literature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/Magazine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/MagazineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/MagazineImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/MagazineRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/MonthlyMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/MonthlyMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/RepositoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/repository/RepositoryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/Searchable.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/Searchable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/items/WeeklyMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/domain/model/WeeklyMagazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/core/usecases/ManageLibraryUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/DailyMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/entity/DailyMagazineEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/LibraryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/entity/LibraryItemEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/entity/MagazineEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/MagazineJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/repository/MagazineJpaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/MonthlyMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/entity/MonthlyMagazineEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/RepositoryFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/repository/RepositoryFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/items/WeeklyMagazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/entity/WeeklyMagazineEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/main/java/frl/hacklab/librarysystem/catalog/details/services/LibraryItemService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/CatalogTestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/CatalogTestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/details/items/MagazineRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/repository/MagazineRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/details/services/LibraryItemServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +60,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="package-info" />
         <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
@@ -33,63 +76,83 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2boSSeObssxWzZF45nJOSR9dKku" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.LibraryItemServiceTest.addItemShouldCallUseCase.executor": "Run",
-    "JUnit.LibraryItemServiceTest.executor": "Run",
-    "JUnit.LibraryItemServiceTest.getItemShouldCallUseCase.executor": "Run",
-    "JUnit.LibraryItemServiceTest.removeItemShouldCallUseCase.executor": "Run",
-    "JUnit.LibraryItemServiceTest.updateItemShouldCallUseCase.executor": "Run",
-    "JUnit.MagazineJpaRepositoryTest (1).executor": "Run",
-    "JUnit.MagazineJpaRepositoryTest.executor": "Run",
-    "JUnit.MagazineJpaRepositoryTest.testIfTestingWorks.executor": "Run",
-    "JUnit.MagazineRepositoryTest.executor": "Run",
-    "JUnit.MagazineRepositoryTest.findAllMagazinesShouldReturnAllMagazines.executor": "Debug",
-    "JUnit.MagazineRepositoryTest.printBeans.executor": "Run",
-    "JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine (1).executor": "Run",
-    "JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine.executor": "Run",
-    "JUnit.MagazineRepositoryTest.testIfTestingWorks.executor": "Run",
-    "JUnit.Test before commit.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.LibrarySystem [clean].executor": "Run",
-    "Maven.LibrarySystem [install].executor": "Run",
-    "Maven.LibrarySystem [org.springframework.boot:spring-boot-maven-plugin:3.2.2:run].executor": "Run",
-    "Maven.LibrarySystem-Application [install].executor": "Run",
-    "Maven.LibrarySystem-Application [org.springframework.boot:spring-boot-maven-plugin:3.2.2:run].executor": "Run",
-    "Maven.LibrarySystem.executor": "Run",
-    "Maven.demo [clean].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "20",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Glenn/Documents/Java/Spring/Spring/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/details",
-    "last_opened_file_path": "C:/Users/Glenn/Documents/Java/Jasmijn",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.LibraryItemServiceTest.addItemShouldCallUseCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryItemServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryItemServiceTest.getItemShouldCallUseCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryItemServiceTest.removeItemShouldCallUseCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryItemServiceTest.updateItemShouldCallUseCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineFrontendServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineFrontendServiceTest.getItemShouldCallUseCase (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineFrontendServiceTest.getItemShouldCallUseCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineJpaRepositoryTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineJpaRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineJpaRepositoryTest.testIfTestingWorks.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineRepositoryTest.findAllMagazinesShouldReturnAllMagazines.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.MagazineRepositoryTest.findMagazineByIdShouldReturnMagazine.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.MagazineRepositoryTest.printBeans.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MagazineRepositoryTest.testIfTestingWorks.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test before commit.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in LibrarySystem-Catalog.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem [org.apache.maven.plugins:maven-site-plugin:3.12.1:site].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem [org.springframework.boot:spring-boot-maven-plugin:3.2.2:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem [site].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem-Application [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem-Application [org.springframework.boot:spring-boot-maven-plugin:3.2.2:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem-Catalog [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem-Catalog [org.apache.maven.plugins:maven-site-plugin:3.12.1:site].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem-Catalog [site].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibrarySystem.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Glenn/Documents/Java/Spring/Spring/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/services&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Hacklab/Java/Lessen&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA",
-      "Markdown"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="frl.hacklab.librarysystem.catalog.application.usecases" />
       <recent name="frl.hacklab.librarysystem.catalog.details.items" />
       <recent name="frl.hacklab.librarysystem.catalog.core.items" />
       <recent name="frl.hacklab.librarysystem.catalog.details.magazine" />
@@ -99,106 +162,68 @@
       <recent name="C:\Users\Glenn\Documents\Java\Spring\Spring\Catalog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Glenn\Documents\Java\Spring\Spring\LibrarySystem-Catalog\src\test\resources" />
       <recent name="C:\Users\Glenn\Documents\Java\Spring\Spring\src\main\resources" />
       <recent name="C:\Users\Glenn\Documents\Java\Spring\Spring\LibrarySystem-Catalog\src\main\java\frl\hacklab\librarysystem\catalog\core" />
       <recent name="C:\Users\Glenn\Documents\Java\Spring\Spring\LibrarySystem-Catalog\src\main\java\frl\hacklab\librarysystem\catalog\core\" />
       <recent name="C:\Users\Glenn\Documents\Java\Spring\Spring\LibrarySystem-Catalog\src\main\java\frl\hacklab\librarysystem\catalog\core\magazine" />
-      <recent name="C:\Users\Glenn\Documents\Java\Spring\Spring\LibrarySystem-Application" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="frl.hacklab.librarysystem.catalog.domain.services" />
+      <recent name="frl.hacklab.librarysystem.catalog.details.services" />
       <recent name="frl.hacklab.librarysystem.catalog.core.items" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="frl.hacklab.librarysystem.catalog.infrastructure.services" />
+      <recent name="frl.hacklab.librarysystem.catalog.infrastructure.persistence.repository" />
       <recent name="frl.hacklab.librarysystem.catalog" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="frl.hacklab.librarysystem.catalog.infrastructure.services" />
+      <recent name="frl.hacklab.librarysystem.catalog.infrastructure.persistence.repository" />
       <recent name="frl.hacklab.librarysystem.catalog.details.services" />
       <recent name="frl.hacklab.librarysystem.catalog.app.config" />
       <recent name="frl.hacklab.librarysystem.catalog.details.items" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="frl.hacklab.librarysystem.catalog.application.usecases" />
       <recent name="frl.hacklab.librarysystem.catalog.details.items" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Test before commit">
-    <configuration name="LibraryItemServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MagazineFrontendServiceTest">
+    <configuration name="MagazineFrontendServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
       <module name="LibrarySystem-Catalog" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.details.services.*" />
+          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.infrastructure.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.details.services" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.details.services.LibraryItemServiceTest" />
+      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services" />
+      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services.MagazineFrontendServiceTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -Dtrace" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryItemServiceTest.addItemShouldCallUseCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MagazineFrontendServiceTest.getItemShouldCallUseCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
       <module name="LibrarySystem-Catalog" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.details.services.*" />
+          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.infrastructure.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.details.services" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.details.services.LibraryItemServiceTest" />
-      <option name="METHOD_NAME" value="addItemShouldCallUseCase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LibraryItemServiceTest.getItemShouldCallUseCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibrarySystem-Catalog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.details.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.details.services" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.details.services.LibraryItemServiceTest" />
+      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services" />
+      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services.MagazineFrontendServiceTest" />
       <option name="METHOD_NAME" value="getItemShouldCallUseCase" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MagazineRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibrarySystem-Catalog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.details.items.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.details.items" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.details.items.MagazineRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibrarySystem-Catalog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.details.items.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.details.items" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.details.items.MagazineRepositoryTest" />
-      <option name="METHOD_NAME" value="saveMagazineShouldReturnSavedMagazine" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea -Dtrace" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -211,6 +236,15 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit" show_console_on_std_err="true" show_console_on_std_out="true">
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -Dtrace" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -260,27 +294,22 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Test before commit" />
-      <item itemvalue="JUnit.MagazineRepositoryTest" />
-      <item itemvalue="JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine" />
-      <item itemvalue="JUnit.LibraryItemServiceTest" />
-      <item itemvalue="JUnit.LibraryItemServiceTest.addItemShouldCallUseCase" />
-      <item itemvalue="JUnit.LibraryItemServiceTest.getItemShouldCallUseCase" />
+      <item itemvalue="JUnit.MagazineFrontendServiceTest" />
+      <item itemvalue="JUnit.MagazineFrontendServiceTest.getItemShouldCallUseCase" />
       <item itemvalue="Maven.LibrarySystem" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LibraryItemServiceTest" />
-        <item itemvalue="JUnit.MagazineRepositoryTest" />
-        <item itemvalue="JUnit.LibraryItemServiceTest.addItemShouldCallUseCase" />
-        <item itemvalue="JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine" />
-        <item itemvalue="JUnit.LibraryItemServiceTest.getItemShouldCallUseCase" />
+        <item itemvalue="JUnit.MagazineFrontendServiceTest" />
+        <item itemvalue="JUnit.MagazineFrontendServiceTest.getItemShouldCallUseCase" />
+        <item itemvalue="JUnit.MagazineFrontendServiceTest.getItemShouldCallUseCase" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-8336523bb0d9-e34d2934" />
+        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
       </set>
     </attachedChunks>
   </component>
@@ -389,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707490231283</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed annotations to work with new location of config files">
+      <option name="closed" value="true" />
+      <created>1707490843275</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707490843275</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -405,6 +442,7 @@
     <MESSAGE value="added Magazine Table migration" />
     <MESSAGE value="added parent module" />
     <MESSAGE value="idea directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea directory" />
+    <MESSAGE value="fixed annotations to work with new location of config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed annotations to work with new location of config files" />
   </component>
 </project>
