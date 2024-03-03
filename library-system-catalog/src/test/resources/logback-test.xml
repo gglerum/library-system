@@ -6,8 +6,15 @@
       </pattern>
     </encoder>
   </appender>
+  <appender name="TOLIST" class="frl.hacklab.librarysystem.catalog.TestLogAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+      </pattern>
+    </encoder>
+  </appender>
   <root level="error">
     <appender-ref ref="STDOUT"/>
+    <appender-ref ref="TOLIST"/>
   </root>
   <logger name="frl.hacklab.librarysystem.catalog" level="trace"/>
 </configuration>

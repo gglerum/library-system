@@ -1,54 +1,76 @@
 package frl.hacklab.librarysystem.catalog.infrastructure.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import frl.hacklab.librarysystem.catalog.CatalogTestConfig;
+import frl.hacklab.librarysystem.catalog.TestLogAppender;
 import frl.hacklab.librarysystem.catalog.application.dto.MagazineDto;
-import frl.hacklab.librarysystem.catalog.domain.model.BorrowingStatus;
-import frl.hacklab.librarysystem.catalog.domain.repository.ItemRepository;
-import frl.hacklab.librarysystem.catalog.infrastructure.persistence.entity.DailyMagazineEntity;
-import frl.hacklab.librarysystem.catalog.infrastructure.persistence.entity.MagazineEntity;
-import frl.hacklab.librarysystem.catalog.infrastructure.persistence.repository.RepositoryFactoryImpl;
-import java.time.LocalDate;
-import java.util.Optional;
+import frl.hacklab.librarysystem.catalog.application.usecases.GetLibraryItemUseCase;
+import frl.hacklab.librarysystem.catalog.domain.model.LibraryItem;
+import java.util.NoSuchElementException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.core.convert.ConversionService;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
-@DataJpaTest
-@Testcontainers
+/**
+ * This class is used to test the MagazineFrontendService class.
+ */
 @SpringJUnitConfig(classes = CatalogTestConfig.class)
+@RunWith(MockitoJUnitRunner.StrictStubs.class)
 class MagazineFrontendServiceTest {
-  @Autowired
-  private MagazineFrontendService libraryItemService;
+  @Mock
+  private GetLibraryItemUseCase useCase;
+  @Mock
+  private ConversionService conversionService;
+  @InjectMocks
+  private MagazineFrontendService magazineFrontendService;
 
-  @Autowired
-  private RepositoryFactoryImpl repositoryFactory;
+  @BeforeEach
+  void reset(){
+    TestLogAppender.reset();
+  }
 
   @Test
-  void getItemShouldCallUseCase(){
-      DailyMagazineEntity item = DailyMagazineEntity.builder()
-          .isnn("123-345")
-          .title("Test Magazine")
-          .appearanceNumber(1)
-          .copyEditor("Test Editor")
-          .genre("Test Genre")
-          .isOnLoan(BorrowingStatus.AVAILABLE)
-          .ageRating("16+")
-          .publicationDate(LocalDate.of(2021, 1, 1))
-          .publisher("Test Publisher")
-          .build();
+  @DisplayName("Should return MagazineDto when item exists")
+  void shouldReturnMagazineDtoWhenItemExists() {
+    LibraryItem item = mock(LibraryItem.class);
+    MagazineDto expectedDto = new MagazineDto();
 
-      ItemRepository itemRepository = repositoryFactory.getRepository(item);
-      MagazineEntity savedItem = (MagazineEntity) itemRepository.save(item);
+    when(useCase.getItem(MagazineDto.class, 1L)).thenReturn(item);
+    when(conversionService.convert(item, MagazineDto.class)).thenReturn(expectedDto);
 
-      Optional<MagazineDto> retrievedItem = Optional.ofNullable(libraryItemService.getItem(
-          MagazineDto.class, savedItem.getId()));
+    MagazineDto actualDto = magazineFrontendService.getItem(MagazineDto.class, 1L);
 
-      assertTrue(retrievedItem.isPresent());
-      assertEquals(savedItem.getIsnn(), retrievedItem.get().getIsnn());
+    assertEquals(expectedDto, actualDto);
+    assertTrue(TestLogAppender.contains("Retrieved item: " + item));
+    assertTrue(TestLogAppender.contains("Converted item: " + expectedDto));
+  }
+
+  @Test
+  @DisplayName("Should throw exception when item does not exist")
+  void shouldThrowExceptionWhenItemDoesNotExist() {
+    when(useCase.getItem(MagazineDto.class, 1L)).thenThrow(NoSuchElementException.class);
+
+    Exception exception = assertThrows(NoSuchElementException.class, () -> magazineFrontendService.getItem(MagazineDto.class, 1L));
+    assertEquals("MagazineDto with id 1 not found", exception.getMessage());
+    assertTrue(TestLogAppender.contains("Item of type MagazineDto not found: 1"));
+  }
+
+  @Test
+  @DisplayName("Should throw exception when there is no repository for the item")
+  void shouldThrowExceptionWhenThereIsNoRepositoryForTheItem() {
+    when(useCase.getItem(MagazineDto.class, 1L)).thenThrow(IllegalArgumentException.class);
+
+    assertThrows(IllegalArgumentException.class, () -> magazineFrontendService.getItem(MagazineDto.class, 1L));
   }
 }

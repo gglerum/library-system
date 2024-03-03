@@ -3,6 +3,7 @@ package frl.hacklab.librarysystem.catalog.infrastructure.services;
 import frl.hacklab.librarysystem.catalog.application.dto.LibraryItemDto;
 import frl.hacklab.librarysystem.catalog.application.dto.MagazineDto;
 import frl.hacklab.librarysystem.catalog.application.usecases.AddLibraryItemUseCase;
+import frl.hacklab.librarysystem.catalog.application.usecases.GetLibraryItemUseCase;
 import frl.hacklab.librarysystem.catalog.application.usecases.RemoveLibraryItemUseCase;
 import frl.hacklab.librarysystem.catalog.application.usecases.UpdateLibraryItemUseCase;
 import frl.hacklab.librarysystem.catalog.domain.model.LibraryItem;
@@ -23,15 +24,15 @@ public class MagazineBackendService extends MagazineFrontendService implements B
   private final AddLibraryItemUseCase addLibraryItemUseCase;
   private final UpdateLibraryItemUseCase updateLibraryItemUseCase;
   private final RemoveLibraryItemUseCase removeLibraryItemUseCase;
-  @Autowired
-  private ConversionService conversionService;
+  private final ConversionService conversionService;
 
   /**
    * @param repositoryFactory The factory for creating repositories.
    */
   @Autowired
-  MagazineBackendService(RepositoryFactoryImpl repositoryFactory) {
-    super(repositoryFactory);
+  MagazineBackendService(ConversionService conversionService, GetLibraryItemUseCase getLibraryItemUseCase, RepositoryFactoryImpl repositoryFactory){
+    super(getLibraryItemUseCase, conversionService);
+    this.conversionService = conversionService;
     addLibraryItemUseCase = new AddLibraryItemUseCase(repositoryFactory);
     updateLibraryItemUseCase = new UpdateLibraryItemUseCase(repositoryFactory);
     removeLibraryItemUseCase = new RemoveLibraryItemUseCase(repositoryFactory);

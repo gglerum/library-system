@@ -4,6 +4,7 @@ import frl.hacklab.librarysystem.catalog.application.dto.LibraryItemDto;
 import frl.hacklab.librarysystem.catalog.domain.repository.ItemRepository;
 import frl.hacklab.librarysystem.catalog.domain.model.LibraryItem;
 import frl.hacklab.librarysystem.catalog.domain.repository.RepositoryFactory;
+import java.util.NoSuchElementException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,6 +34,7 @@ public class GetLibraryItemUseCase {
      * @param itemClass The class of the library item to be retrieved.
      * @param id The id of the library item to be retrieved.
      * @return The retrieved item.
+     * @throws NoSuchElementException when the repository could got retrieve the item
      */
     public LibraryItem getItem(Class<? extends LibraryItemDto> itemClass, Long id) {
         logger.trace("attempting to retrieve item ({}, {})", itemClass, id);
