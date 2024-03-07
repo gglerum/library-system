@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -19,7 +20,7 @@ import lombok.experimental.SuperBuilder;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "magazine_type", discriminatorType = DiscriminatorType.STRING)
 @SuperBuilder
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString(callSuper = true)
 @Table(name = "magazine")
 public class MagazineEntity extends LibraryItemEntity {

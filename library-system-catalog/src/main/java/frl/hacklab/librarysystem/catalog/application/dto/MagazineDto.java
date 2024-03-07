@@ -16,4 +16,5 @@ public class MagazineDto extends LibraryItemDto {
   private String isnn;
   private int appearanceNumber;
   private String name;
+  private MagazineType type;
 }

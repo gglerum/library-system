@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc6336b8-8e8e-4894-ba81-23f70bd94f7d" name="Changes" comment="Did some refactoring to be able to write mocks for the MagazineFrontendService. Added an Appender for logback to be able to test log entries.">
-      <change afterPath="$PROJECT_DIR$/library-system-catalog/src/test/java/frl/hacklab/librarysystem/catalog/TestLogAppender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="dc6336b8-8e8e-4894-ba81-23f70bd94f7d" name="Changes" comment="reworked repository test and added mapper test">
+      <change afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/dto/MagazineType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-system-catalog/src/test/java/frl/hacklab/librarysystem/catalog/application/dto/MagazineType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-system-catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/mappers/MagazineMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/CatalogConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/CatalogConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/usecases/GetLibraryItemUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/usecases/GetLibraryItemUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineBackendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineBackendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineFrontendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineFrontendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineFrontendServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/services/MagazineFrontendServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/test/resources/logback-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/test/resources/logback-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-system-catalog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/dto/MagazineDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/application/dto/MagazineDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/mappers/MagazineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/mappers/MagazineMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/entity/MagazineEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/main/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/entity/MagazineEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-system-catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/repository/MagazineRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-system-catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/persistence/repository/MagazineRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +25,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="package-info" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -72,16 +73,27 @@
     "JUnit.MagazineJpaRepositoryTest (1).executor": "Run",
     "JUnit.MagazineJpaRepositoryTest.executor": "Run",
     "JUnit.MagazineJpaRepositoryTest.testIfTestingWorks.executor": "Run",
+    "JUnit.MagazineJpaRepositoryTest.whenFindById_thenReturnMagazine.executor": "Run",
+    "JUnit.MagazineMapperTest.convertMagazineEntityToDTO.executor": "Run",
+    "JUnit.MagazineMapperTest.testConvertDailyMagazineToDto.executor": "Run",
+    "JUnit.MagazineMapperTest.testConvertDtoToDailyMagazine.executor": "Run",
+    "JUnit.MagazineMapperTest.testConvertDtoToMonthlyMagazine.executor": "Run",
+    "JUnit.MagazineMapperTest.testConvertDtoToWeeklyMagazine.executor": "Run",
+    "JUnit.MagazineMapperTest.testConvertDtoWithWrongTypeThrowsException.executor": "Run",
+    "JUnit.MagazineMapperTest.testDtoToMagazineEntityConversion.executor": "Run",
     "JUnit.MagazineRepositoryTest.executor": "Run",
     "JUnit.MagazineRepositoryTest.findAllMagazinesShouldReturnAllMagazines.executor": "Debug",
     "JUnit.MagazineRepositoryTest.findMagazineByIdShouldReturnMagazine.executor": "Debug",
     "JUnit.MagazineRepositoryTest.printBeans.executor": "Run",
+    "JUnit.MagazineRepositoryTest.saveMagazineShouldPersistAndReturnMagazine.executor": "Run",
     "JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine (1).executor": "Run",
     "JUnit.MagazineRepositoryTest.saveMagazineShouldReturnSavedMagazine.executor": "Run",
+    "JUnit.MagazineRepositoryTest.saveShouldHandleNullEntity.executor": "Run",
+    "JUnit.MagazineRepositoryTest.saveShouldUpdateExistingEntity.executor": "Run",
     "JUnit.MagazineRepositoryTest.testIfTestingWorks.executor": "Run",
     "JUnit.Test before commit.executor": "Run",
     "JUnit.java in LibrarySystem-Catalog.executor": "Run",
-    "JUnit.java in library-system-catalog.executor": "Coverage",
+    "JUnit.java in library-system-catalog.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.LibrarySystem [clean].executor": "Run",
     "Maven.LibrarySystem [compile].executor": "Run",
@@ -107,7 +119,7 @@
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/Glenn/Documents/Java/Spring/Spring/LibrarySystem-Catalog/src/test/java/frl/hacklab/librarysystem/catalog/infrastructure/services",
     "last_opened_file_path": "C:/Users/Glenn/Documents/Java/Spring/SpringLibrarySystem/library-system",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -152,28 +164,33 @@
       <recent name="frl.hacklab.librarysystem.catalog" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="frl.hacklab.librarysystem.catalog.application.dto" />
+      <recent name="frl.hacklab.librarysystem.catalog.infrastructure.mappers" />
       <recent name="frl.hacklab.librarysystem.catalog.infrastructure.services" />
       <recent name="frl.hacklab.librarysystem.catalog.infrastructure.persistence.repository" />
       <recent name="frl.hacklab.librarysystem.catalog.details.services" />
-      <recent name="frl.hacklab.librarysystem.catalog.app.config" />
-      <recent name="frl.hacklab.librarysystem.catalog.details.items" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="frl.hacklab.librarysystem.catalog.application.usecases" />
       <recent name="frl.hacklab.librarysystem.catalog.details.items" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MagazineFrontendServiceTest (1)">
-    <configuration name="MagazineFrontendServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+  <component name="RunManager" selected="JUnit.MagazineRepositoryTest.saveShouldUpdateExistingEntity">
+    <configuration name="MagazineJpaRepositoryTest.whenFindById_thenReturnMagazine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
       <module name="library-system-catalog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.infrastructure.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services.MagazineFrontendServiceTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MagazineJpaRepositoryTest" />
+      <option name="METHOD_NAME" value="whenFindById_thenReturnMagazine" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea -Dtrace" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MagazineRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+      <module name="library-system-catalog" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MagazineRepositoryTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea -Dtrace" />
@@ -181,51 +198,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MagazineFrontendServiceTest.shouldReturnMagazineDtoWhenItemExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+    <configuration name="MagazineRepositoryTest.saveMagazineShouldPersistAndReturnMagazine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
       <module name="library-system-catalog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.infrastructure.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services.MagazineFrontendServiceTest" />
-      <option name="METHOD_NAME" value="shouldReturnMagazineDtoWhenItemExists" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MagazineRepositoryTest" />
+      <option name="METHOD_NAME" value="saveMagazineShouldPersistAndReturnMagazine" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea -Dtrace" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MagazineFrontendServiceTest.shouldThrowExceptionWhenItemDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+    <configuration name="MagazineRepositoryTest.saveShouldHandleNullEntity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
       <module name="library-system-catalog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.infrastructure.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services.MagazineFrontendServiceTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenItemDoesNotExist" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MagazineRepositoryTest" />
+      <option name="METHOD_NAME" value="saveShouldHandleNullEntity" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea -Dtrace" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MagazineFrontendServiceTest.shouldThrowExceptionWhenThereIsNoRepositoryForTheItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
+    <configuration name="MagazineRepositoryTest.saveShouldUpdateExistingEntity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
       <module name="library-system-catalog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frl.hacklab.librarysystem.catalog.infrastructure.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services" />
-      <option name="MAIN_CLASS_NAME" value="frl.hacklab.librarysystem.catalog.infrastructure.services.MagazineFrontendServiceTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenThereIsNoRepositoryForTheItem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MagazineRepositoryTest" />
+      <option name="METHOD_NAME" value="saveShouldUpdateExistingEntity" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea -Dtrace" />
       <method v="2">
@@ -249,17 +248,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea -Dtrace" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="java in library-system-catalog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
-      <module name="library-system-catalog" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="directory" />
-      <option name="VM_PARAMETERS" value="-ea -Dtrace" />
-      <dir value="$PROJECT_DIR$/library-system-catalog/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -309,20 +297,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Test before commit" />
-      <item itemvalue="JUnit.MagazineFrontendServiceTest (1)" />
-      <item itemvalue="JUnit.MagazineFrontendServiceTest.shouldReturnMagazineDtoWhenItemExists" />
-      <item itemvalue="JUnit.MagazineFrontendServiceTest.shouldThrowExceptionWhenItemDoesNotExist" />
-      <item itemvalue="JUnit.MagazineFrontendServiceTest.shouldThrowExceptionWhenThereIsNoRepositoryForTheItem" />
-      <item itemvalue="JUnit.java in library-system-catalog" />
+      <item itemvalue="JUnit.MagazineJpaRepositoryTest.whenFindById_thenReturnMagazine" />
+      <item itemvalue="JUnit.MagazineRepositoryTest" />
+      <item itemvalue="JUnit.MagazineRepositoryTest.saveMagazineShouldPersistAndReturnMagazine" />
+      <item itemvalue="JUnit.MagazineRepositoryTest.saveShouldHandleNullEntity" />
+      <item itemvalue="JUnit.MagazineRepositoryTest.saveShouldUpdateExistingEntity" />
       <item itemvalue="Maven.LibrarySystem" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MagazineFrontendServiceTest (1)" />
-        <item itemvalue="JUnit.java in library-system-catalog" />
-        <item itemvalue="JUnit.MagazineFrontendServiceTest.shouldThrowExceptionWhenItemDoesNotExist" />
-        <item itemvalue="JUnit.MagazineFrontendServiceTest.shouldReturnMagazineDtoWhenItemExists" />
-        <item itemvalue="JUnit.MagazineFrontendServiceTest.shouldThrowExceptionWhenThereIsNoRepositoryForTheItem" />
+        <item itemvalue="JUnit.MagazineRepositoryTest.saveShouldUpdateExistingEntity" />
+        <item itemvalue="JUnit.MagazineRepositoryTest.saveShouldHandleNullEntity" />
+        <item itemvalue="JUnit.MagazineRepositoryTest.saveMagazineShouldPersistAndReturnMagazine" />
+        <item itemvalue="JUnit.MagazineRepositoryTest" />
+        <item itemvalue="JUnit.MagazineJpaRepositoryTest.whenFindById_thenReturnMagazine" />
       </list>
     </recent_temporary>
   </component>
@@ -330,6 +318,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -446,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707490843275</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Did some refactoring to be able to write mocks for the MagazineFrontendService. Added an Appender for logback to be able to test log entries.">
+      <option name="closed" value="true" />
+      <created>1709476814752</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709476814752</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -464,9 +461,10 @@
     <MESSAGE value="idea directory" />
     <MESSAGE value="fixed annotations to work with new location of config files" />
     <MESSAGE value="Did some refactoring to be able to write mocks for the MagazineFrontendService. Added an Appender for logback to be able to test log entries." />
-    <option name="LAST_COMMIT_MESSAGE" value="Did some refactoring to be able to write mocks for the MagazineFrontendService. Added an Appender for logback to be able to test log entries." />
+    <MESSAGE value="reworked repository test and added mapper test" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworked repository test and added mapper test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/library_system$java_in_library_system_catalog.ic" NAME="java in library-system-catalog Coverage Results" MODIFIED="1709476017764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/library_system$java_in_library_system_catalog.ic" NAME="java in library-system-catalog Coverage Results" MODIFIED="1709810677321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
